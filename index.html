@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конструктор посещения события</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <main class="container">
+        <section class="event-card">
+            <h1 id="event-title"></h1>
+
+            <p id="event-date"></p>
+            <p id="event-place"></p>
+            <p id="event-description"></p>
+
+            <button id="show-program" type="button">
+                Показать программу
+            </button>
+
+            <div id="program" class="program" hidden></div>
+        </section>
+
+        <section class="service-card">
+            <h2>Выбор дополнительных услуг</h2>
+
+            <form id="service-form">
+                <div class="service-option">
+                    <input type="checkbox" id="guide">
+                    <label for="guide">Экскурсия с гидом — 500 руб.</label>
+                </div>
+
+                <div class="service-option">
+                    <input type="checkbox" id="audio">
+                    <label for="audio">Аудиогид — 350 руб.</label>
+                </div>
+
+                <div class="service-option">
+                    <input type="checkbox" id="catalog">
+                    <label for="catalog">Каталог выставки — 250 руб.</label>
+                </div>
+
+                <button type="submit">Рассчитать стоимость</button>
+            </form>
+
+            <p id="choice-error" class="error" hidden></p>
+            <p id="data-error" class="error" hidden></p>
+
+            <div id="result" class="result" hidden></div>
+
+            <pre id="report-json" class="json-result" hidden></pre>
+        </section>
+    </main>
+
+    <script src="./app.js"></script>
+</body>
+</html>
